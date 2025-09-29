@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "80:80"  # Puerto del servidor: Puerto del contenedor
+    volumes:
+      - ./html:/usr/share/nginx/html # Monta una carpeta local para nuestros archivos web
+
+  db:
+    image: redis:latest
+    container_name: redis_db
+    # Este servicio no necesita mapeo de puertos al exterior
