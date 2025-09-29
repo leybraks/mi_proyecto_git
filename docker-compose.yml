@@ -2,11 +2,9 @@ version: '3.8'
 
 services:
   web:
-    image: nginx:latest
+    build: .
     ports:
-      - "80:80"  # Puerto del servidor: Puerto del contenedor
-    volumes:
-      - ./html:/usr/share/nginx/html # Monta una carpeta local para nuestros archivos web
+      - "80:5000"  # Puerto del servidor: Puerto del contenedoro
 
   db:
     image: redis:latest
