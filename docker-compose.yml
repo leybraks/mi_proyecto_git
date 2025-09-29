@@ -2,11 +2,17 @@ version: '3.8'
 
 services:
   web:
-    build: .
+    build: . 
     ports:
-      - "80:5000"  # Puerto del servidor: Puerto del contenedoro
-
+      - "80:5000"
+    
   db:
     image: redis:latest
     container_name: redis_db
-    # Este servicio no necesita mapeo de puertos al exterior
+    # *** ESTA ES LA RUTA CRÍTICA ***
+    volumes:
+      - datos-redis:/data  # <--- [A] Monta el volumen nombrado 'datos-redis' en la carpeta interna de Redis (/data)
+
+# *** ESTA SECCIÓN DEBE EXISTIR AL FINAL DEL ARCHIVO ***
+volumes:
+  datos-redis:             # <--- [B] Define el volumen nombrado 'datos-redis'
