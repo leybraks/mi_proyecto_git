@@ -21,7 +21,7 @@ def hello():
         html = "<h3>¡Hola!</h3><b>Redis no está disponible.</b> El contador falló."
     else:
 
-        html = "<h3>¡El Flujo VS Code → GitHub → AWS FUNCIONA! V6.0 ✅</h3>El número de visitantes es: <b>{0}</b>"
+        html = "<h3>¡CI/CD COMPLETADO: 100% AUTOMÁTICO! V8.0 🎉</h3>El número de visitantes es: <b>{0}</b>"
 
     return html.format(count)
 
