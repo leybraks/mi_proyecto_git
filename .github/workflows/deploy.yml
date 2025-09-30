@@ -21,7 +21,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             # Ir al directorio del proyecto en el servidor de AWS
-            cd /home/ubuntu/mi-proyecto-git/
+            cd /home/ubuntu/mi_proyecto_git/
 
             # Ejecutar el script de despliegue que tú escribiste
             ./deploy.sh
