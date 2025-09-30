@@ -3,7 +3,7 @@ name: Despliegue Automático CI/CD
 on:
   push:
     branches:
-      - main # Asegúrate de que esta es tu rama principal (o master)
+      - master # Asegúrate de que esta es tu rama principal (o master)
 
 jobs:
   deploy:
